@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% set active_page = "p4" %}
+
+{% block title %}Page 2: Ask for your favorite color{% endblock %}
+
+{% block content %}
+  <h1>The Ksp of calcium carbonate is 6.0x10^-9. What is the concentration of calcium ions when the [carbonate ions] is 2.0x10^-5?</h1>
+
+<form action={{ url_for("renderp5") }} method="POST">
+   <div class="container mt-3 id = "Ksp" required>
+     <div class="form-check">
+      <input type="radio" class="form-check-input" id="13" name="Ksp" value="1.2x10^-4" checked>
+      <label class="form-check-label" for="13">1.2x10^-4</label>
+     </div>
+	 <div class="form-check">
+      <input type="radio" class="form-check-input" id="14" name="Ksp" value="1.2x10^-14">
+      <label class="form-check-label" for="14">1.2x10^-14</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="15" name="Ksp" value="2.0x10^-5">
+      <label class="form-check-label" for="15">2.0x10^-5</label>
+    </div>
+	<div class="form-check">
+      <input type="radio" class="form-check-input" id="16" name="Ksp" value="3.0x10^-4">
+      <label class="form-check-label" for="16">3.0x10^-4</label>
+    </div>
+	<br>
+	<button type="submit" class="btn btn-primary">Next Question</button>
+ </div>
+ </form> 
+
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% set active_page = "p5" %}
+
+{% block title %}Page 3--Now we know everything!{% endblock %}
+
+{% block content %}
+  <h1>Results:</h1>
+
+<ul>
+ <li> You answered: {{ session['Equilibrium'] }} </li>
+ <li> You answered: {{ session['avacado'] }} </li>
+ <li> You answered: {{ session['sigfig'] }} </li>
+ <li> You answered: {{ session['Ksp'] }} </li>
+</ul>
+<p> You got {{ total }}/4</p>
+<p> It took you {{ Time }} seconds to complete this quiz
+ <button><a href="/tryagain">Try Again</a></button>
+
+
+{% endblock %}

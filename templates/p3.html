@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% set active_page = "p3" %}
+
+{% block title %}Page 3: Ask for your favorite color{% endblock %}
+
+{% block content %}
+  <h1>How many significant figures are in this number?</h1>
+  <h2>.00159800</h2>
+
+<form action={{ url_for("renderp4") }} method="POST">
+   <div class="container mt-3 id = "sigfig" required>
+     <div class="form-check">
+      <input type="radio" class="form-check-input" id="9" name="sigfig" value="6 figures" checked>
+      <label class="form-check-label" for="9">6 figures</label>
+     </div>
+	 <div class="form-check">
+      <input type="radio" class="form-check-input" id="10" name="sigfig" value="8 figures">
+      <label class="form-check-label" for="10">8 figures</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="11" name="sigfig" value="4 figures">
+      <label class="form-check-label" for="11">4 figures</label>
+    </div>
+	<div class="form-check">
+      <input type="radio" class="form-check-input" id="12" name="sigfig" value="7 figures">
+      <label class="form-check-label" for="12">7 figures</label>
+    </div>
+	<br>
+	<button type="submit" class="btn btn-primary">Next Question</button>
+ </div>
+ </form> 
+
+
+
+{% endblock %}
